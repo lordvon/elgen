@@ -1,0 +1,4 @@
+tol		1e-5
+difftol		1e-3
+cornertol	1e-4
+spikelim	.25

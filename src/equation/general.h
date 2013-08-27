@@ -1,0 +1,36 @@
+void mallocEquation(Grid*g,Equation*e){
+	int b,xd3;
+	e->phi=malloc(sizeof(double*)*g->tb);
+	e->psi=malloc(sizeof(double*)*g->tb);
+	e->A1=malloc(sizeof(double*)*g->tb);
+	e->A2=malloc(sizeof(double*)*g->tb);
+	e->A3=malloc(sizeof(double*)*g->tb);
+	e->a=malloc(sizeof(double*)*g->tb);
+	e->b=malloc(sizeof(double*)*g->tb);
+	e->c=malloc(sizeof(double*)*g->tb);
+	e->d=malloc(sizeof(double*)*g->tb);
+	e->gamma=malloc(sizeof(double*)*g->tb);
+	e->delta=malloc(sizeof(double*)*g->tb);
+	e->xphi=malloc(sizeof(double*)*g->tb);
+	e->xpsi=malloc(sizeof(double*)*g->tb);
+	e->yphi=malloc(sizeof(double*)*g->tb);
+	e->ypsi=malloc(sizeof(double*)*g->tb);
+	for(b=0;b<g->tb;b++){
+		xd3=g->xdim[b][3];
+		e->phi[b]=malloc(sizeof(double)*xd3);
+		e->psi[b]=malloc(sizeof(double)*xd3);
+		e->A1[b]=malloc(sizeof(double)*xd3);
+		e->A2[b]=malloc(sizeof(double)*xd3);
+		e->A3[b]=malloc(sizeof(double)*xd3);
+		e->a[b]=malloc(sizeof(double)*xd3);
+		e->b[b]=malloc(sizeof(double)*xd3);
+		e->c[b]=malloc(sizeof(double)*xd3);
+		e->d[b]=malloc(sizeof(double)*xd3);
+		e->gamma[b]=malloc(sizeof(double)*xd3);
+		e->delta[b]=malloc(sizeof(double)*xd3);
+		e->xphi[b]=malloc(sizeof(double)*xd3);
+		e->yphi[b]=malloc(sizeof(double)*xd3);
+		e->xpsi[b]=malloc(sizeof(double)*xd3);
+		e->ypsi[b]=malloc(sizeof(double)*xd3);
+	}
+}
